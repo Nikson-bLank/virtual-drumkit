@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(67, 96, 179);
+    
+}
+
+
+.heading{
+    text-align: center;
+    text-shadow: 3px 2px rgb(35, 67, 136);
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+  
+}
+
+
+.btn{
+    height: 120px;
+    width: 120px;
+    box-shadow: 2px 1px 3px rgb(35, 67, 136);
+    border-radius: 100%;
+    border: solid .5rem rgb(142, 170, 231);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px rgb(48, 48, 48) ;
+    
+}
+
+.btn:hover{
+  
+    transition: 1ms ease;
+    box-shadow: 5px 8px 13px rgb(35, 67, 136);
+
+}
+
+
+
+#snare{
+    background: url(images/snare.png);
+}
+
+#crash{
+    background: url(images/crash.png);
+}
+
+#kick-bass{
+    background: url(images/kick.png);
+}
+
+#tom1{
+      background: url(images/tom1.png);
+}
+
+
+#tom2{
+      background: url(images/tom2.png);
+}
+
+#tom3{
+      background: url(images/tom3.png);
+}
+
+#tom4{
+      background: url(images/tom4.png);
+}
