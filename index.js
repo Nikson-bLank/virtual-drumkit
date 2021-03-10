@@ -1,16 +1,18 @@
-var button = document.querySelectorAll(".btn");
+var button = document.querySelectorAll(".btn"); //select all element with class btn
 
 for (i = 0; i <= button.length; i++) {
   var allbuttons = document.querySelectorAll(".btn")[i];
   allbuttons.addEventListener("click", function () {
-    console.log(this.innerHTML);
-
+    // console.log(this.innerHTML);
+       //button check
     var innerLetter = this.innerHTML;
     makeSound(innerLetter);
+    buttonAnimation(innerLetter)
   });
-
+      //keyboard press check
   document.addEventListener("keyup", function (event) {
     makeSound(event.key);
+    buttonAnimation(event.key)
   });
 
 }
@@ -19,8 +21,8 @@ for (i = 0; i <= button.length; i++) {
 
 function makeSound(key) {
   switch (key) {
-    case "W":
-      case "w":
+    case "W":  //uppercase
+      case "w": // lowercase
       var snare = new Audio("sounds/snare.mp3");
       snare.play();
       break;
@@ -65,4 +67,15 @@ function makeSound(key) {
       console.log(key);
       break;
   }
+}
+
+
+function buttonAnimation(keyPress) {
+   var activeBtn= document.querySelector("."+keyPress)
+    console.log(keyPress)
+    activeBtn.classList.add("pressed");
+    setTimeout(function(){
+      activeBtn.classList.remove("pressed")
+    }, 100)
+    
 }
